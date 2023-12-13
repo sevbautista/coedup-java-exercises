@@ -123,7 +123,7 @@ public class ControlFlowExercises {
 //        EXERCISE 3: NUMBER GRADES TO LETTER GRADES
 
 
-//        Scanner sC = new Scanner(System.in);
+        Scanner sC = new Scanner(System.in);
 //        System.out.println("Give me the grade from 0 to 100:");
 //        while (sC.hasNext()) {
 //            int uI = sC.nextInt();
@@ -158,8 +158,31 @@ public class ControlFlowExercises {
 ////            System.out.print("then let's stop. You got what you got. So be it.");
 ////            break;
 ////    }
+//        FARRUKH'S EXAMPLE:
+        boolean confirm;
+
+        do {
+            System.out.println("Enter a numerical grade from 0 to 100: ");
+            int userGrade = sC.nextInt();
+
+            if (userGrade >= 88 && userGrade <= 100) {
+                System.out.println("A");
+            } else if (userGrade >= 80 && userGrade <= 87) {
+                System.out.println("B");
+            } else if (userGrade >= 67 && userGrade <= 79) {
+                System.out.println("C");
+            } else {
+                System.out.println("F");
+            }
+            System.out.println("Continue? [y/n]");
+            confirm = sC.next().equalsIgnoreCase("y");
+        } while (confirm);
+        System.out.println("K thanks bye!");
+    }
 }
-}
+
+
+
 
 
 
